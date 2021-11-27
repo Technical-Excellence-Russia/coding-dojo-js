@@ -2,9 +2,14 @@ const HelloWorld = require("../src/HelloWorld");
 
 describe("HelloWorld Should", () => {
 
+    const helloWorld = new HelloWorld();
+
     test("return Hello World", () => {
-        let helloWorld = new HelloWorld();
-        expect("Hello World").toEqual(helloWorld.helloWorld());
+        const expected = "Hello World";
+
+        const actual = helloWorld.helloWorld();
+
+        expect(expected).toEqual(actual);
     });
 
 });
